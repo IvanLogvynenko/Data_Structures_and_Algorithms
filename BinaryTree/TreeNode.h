@@ -1,0 +1,14 @@
+//
+// Created by nachtwandler on 07.01.23.
+//
+
+#ifndef DATA_STRUCTURES_AND_ALGORITHMS_TREENODE_H
+#define DATA_STRUCTURES_AND_ALGORITHMS_TREENODE_H
+
+
+class TreeNode {
+
+};
+
+
+#endif //DATA_STRUCTURES_AND_ALGORITHMS_TREENODE_H
