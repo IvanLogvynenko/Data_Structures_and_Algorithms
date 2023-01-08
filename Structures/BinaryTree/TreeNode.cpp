@@ -3,7 +3,7 @@
 //
 
 #include "TreeNode.h"
-#include "Exceptions/NodeAlreadyExistsException.h"
+#include "../Exceptions/NodeAlreadyExistsException.h"
 
 void TreeNode::push(INode *newNode) {
     if (newNode->getValue() == this->value) throw NodeAlreadyExistsException(this, newNode);

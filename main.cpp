@@ -1,8 +1,6 @@
 #include <iostream>
 
-#include "Strutures/BinaryTree/Exceptions/NodeAlreadyExistsException.h"
-
-#include "Strutures/IStructure.h"
+#include "Structures/IStructure.h"
 
 int main() {
 
