@@ -1,10 +1,9 @@
 #include <iostream>
-#include "BinaryTree/BinaryTree.h"
+
+#include "Strutures/BinaryTree/Exceptions/NodeAlreadyExistsException.h"
+
+#include "Strutures/IStructure.h"
 
 int main() {
-    BinaryTree<int> binaryTree;
-    binaryTree.push(5);
-    binaryTree.push(8);
-    binaryTree.push(7);
 
 }
