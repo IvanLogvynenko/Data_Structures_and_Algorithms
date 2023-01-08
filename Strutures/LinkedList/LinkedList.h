@@ -1,0 +1,14 @@
+//
+// Created by nachtwandler on 08.01.23.
+//
+
+#ifndef DATA_STRUCTURES_AND_ALGORITHMS_LINKEDLIST_H
+#define DATA_STRUCTURES_AND_ALGORITHMS_LINKEDLIST_H
+
+
+class LinkedList {
+
+};
+
+
+#endif //DATA_STRUCTURES_AND_ALGORITHMS_LINKEDLIST_H
