@@ -8,3 +8,8 @@ ListNode &ListNode::operator=(int newValue) {
     this->value = newValue;
     return *this;
 }
+
+void ListNode::push(INode *newNode) {
+    if (this->next) this->push(newNode);
+    else this->next = newNode;
+}

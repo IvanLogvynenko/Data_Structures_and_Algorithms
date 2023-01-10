@@ -7,12 +7,13 @@
 
 #include "INode.h"
 
+template <class T>
 class IStructure {
 protected:
-    int size = 0;
+    T size = 0;
 public:
     IStructure(int size) : size(size) {}
-    virtual void push(int value) = 0;
+    virtual void push(T value) = 0;
     virtual void push(INode* newNode) = 0;
 };
 

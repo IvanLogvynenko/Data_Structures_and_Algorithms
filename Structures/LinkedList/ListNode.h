@@ -8,20 +8,24 @@
 
 #include "../INode.h"
 
-class ListNode : public INode {
+template <class T>
+class ListNode : public INode<T> {
 private:
-    int value;
-    INode* next;
+    T value;
+    INode<T>* next;
 public:
     explicit ListNode(int value) : value(value), next(nullptr) {}
     
-    INode* getNext() { return this->next; }
+    INode<T>* getNext() { return this->next; }
+    void push(INode<T>* newNode) override;
     int getValue() override {return this->value; }
     
     void setValue(int newValue) {this->value = newValue; }
     
     explicit operator int() override { return this->value; }
-    ListNode& operator= (int newValue);
+    ListNode<T>& operator= (int newValue);
+
+    ~ListNode() override { delete this->next; }
 };
 
 
