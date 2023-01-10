@@ -3,7 +3,8 @@
 //
 #include "NodeAlreadyExistsException.h"
 
-void NodeAlreadyExistsException::replace() {
+template <class T>
+void NodeAlreadyExistsException<T>::replace() {
     delete this->oldNode;
     this->oldNode = this->newNode;
 }

@@ -8,13 +8,13 @@
 #include <exception>
 #include "../INode.h"
 
+template <class T>
 class NodeAlreadyExistsException : public std::exception {
 private:
-    INode *oldNode, *newNode;
+    INode<T> *oldNode, *newNode;
 public:
-    NodeAlreadyExistsException(INode* oldNode, INode* newNode) : oldNode(oldNode), newNode(newNode) {}
+    NodeAlreadyExistsException(INode<T>* oldNode, INode<T>* newNode) : oldNode(oldNode), newNode(newNode) {}
     void replace();
 };
-
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_NODEALREADYEXISTSEXCEPTION_H

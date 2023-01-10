@@ -7,7 +7,7 @@
 
 #include "../INode.h"
 
-class TreeNode : public INode {
+class TreeNode : public INode<int> {
 private:
     INode *right, *left;
     int value;

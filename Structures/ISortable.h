@@ -10,7 +10,7 @@
 template<class T>
 class ISortable{
 public:
-    std::vector<T> getArray() = 0;
+    virtual std::vector<T> getArray() = 0;
 };
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_ISORTABLE_H

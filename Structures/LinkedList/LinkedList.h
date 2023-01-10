@@ -12,20 +12,19 @@
 #include "ListNode.h"
 
 template<class T>
-class LinkedList : public IStructure, public ISortable<T> {
+class LinkedList : public IStructure<T>, public ISortable<T> {
 public:
-    LinkedList() : root(nullptr), IStructure(0) {}
-    explicit LinkedList(ListNode* root) : root(root), IStructure(1) {}
+    LinkedList() : root(nullptr), IStructure<T>(0) {}
+    explicit LinkedList(ListNode<T>* root) : root(root), IStructure<T>(1) {}
 
-    void push(int value) override;
-    void push(INode* newNode) override;
+    void push(INode<T>* newNode) override;
+    void push(T value) override;
 
     std::vector<T> getArray() override;
 private:
-    ListNode* root;
+    ListNode<T>* root;
 };
 
-
-
+template class LinkedList<int>;
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_LINKEDLIST_H

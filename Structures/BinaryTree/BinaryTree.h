@@ -10,18 +10,18 @@
 #include "../INode.h"
 
 
-class BinaryTree : public IStructure {
+class BinaryTree : public IStructure<int> {
 private:
-    INode* root;
+    INode<int>* root;
 public:
     BinaryTree() : root(nullptr), IStructure(0) {}
-    BinaryTree(INode* root) : root(root), IStructure(1) {}
+    BinaryTree(INode<int>* root) : root(root), IStructure(1) {}
     explicit BinaryTree(int value) : root(new TreeNode(value)), IStructure(1) {}
 
     ~BinaryTree() { delete root; }
 
     void push(int value) override;
-    void push(INode* newNode) override;
+    void push(INode<int>* newNode) override;
 };
 
 

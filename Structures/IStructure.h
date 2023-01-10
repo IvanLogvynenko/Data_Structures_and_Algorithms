@@ -12,9 +12,9 @@ class IStructure {
 protected:
     T size = 0;
 public:
-    IStructure(int size) : size(size) {}
+    explicit IStructure(int size) : size(size) {}
     virtual void push(T value) = 0;
-    virtual void push(INode* newNode) = 0;
+    virtual void push(INode<T>* newNode) = 0;
 };
 
 
