@@ -6,10 +6,10 @@
 #include "../Exceptions/NodeAlreadyExistsException.h"
 
 void TreeNode::push(INode *newNode) {
-    if (newNode->getValue() == this->value) throw NodeAlreadyExistsException(this, newNode);
+    if (newNode->getValue() == this->value) throw NodeAlreadyExistsException<int>(this, newNode);
     if (*this > *newNode) {
         if (this->right){
-            this->right->push(newNode);
+            //this->right->push(newNode);
             return;
         }
         else{
@@ -19,7 +19,7 @@ void TreeNode::push(INode *newNode) {
     }
     else{
         if (this->left){
-            this->left->push(newNode);
+            //this->left->push(newNode);
             return;
         }
         else{

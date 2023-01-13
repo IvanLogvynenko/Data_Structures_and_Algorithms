@@ -8,10 +8,10 @@ void BinaryTree::push(int value) {
     this->push(new TreeNode(value));
 }
 
-void BinaryTree::push(INode *newNode) {
+void BinaryTree::push(INode<int>* newNode) {
     this->size++;
     if (this->root)
-        this->root->push(newNode);
-    else
+        //this->root->push(newNode);
+    //else
         this->root = newNode;
 }

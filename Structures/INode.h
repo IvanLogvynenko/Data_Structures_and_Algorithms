@@ -5,13 +5,12 @@
 #ifndef DATA_STRUCTURES_AND_ALGORITHMS_INODE_H
 #define DATA_STRUCTURES_AND_ALGORITHMS_INODE_H
 
-
+template <class T>
 class INode {
 public:
-    virtual ~INode() {};
-    virtual void push(INode* newNode) = 0;
-    virtual int getValue() = 0;
-    virtual operator int() = 0;
+    virtual T getValue() = 0;
+    virtual explicit operator T() = 0;
+    virtual ~INode() = default;
 };
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_INODE_H
