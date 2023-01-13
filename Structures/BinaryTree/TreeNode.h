@@ -5,18 +5,18 @@
 #ifndef DATA_STRUCTURES_AND_ALGORITHMS_TREENODE_H
 #define DATA_STRUCTURES_AND_ALGORITHMS_TREENODE_H
 
-#include "../INode.h"
+#include "ITreeNode.h"
 
-class TreeNode : public INode<int> {
+class TreeNode : public ITreeNode {
 private:
-    INode *right, *left;
+    ITreeNode *right, *left;
     int value;
 public:
     explicit TreeNode(int value) : value(value), right(nullptr), left(nullptr) {}
 
     ~TreeNode() override;
 
-    void push(INode *newNode);// override;
+    void push(ITreeNode *newNode) override;
     int getValue() override { return this->value; }
 
     bool operator> (INode& node) const { return this->value > node.getValue(); }

@@ -5,23 +5,21 @@
 #ifndef DATA_STRUCTURES_AND_ALGORITHMS_BINARYTREE_H
 #define DATA_STRUCTURES_AND_ALGORITHMS_BINARYTREE_H
 
-#include "TreeNode.h"
-#include "../IStructure.h"
-#include "../INode.h"
+#include "ITreeNode.h"
+#include "IBinaryTree.h"
 
 
-class BinaryTree : public IStructure<int> {
+class BinaryTree : public IBinaryTree{
 private:
-    INode<int>* root;
+    ITreeNode* root;
 public:
-    BinaryTree() : root(nullptr), IStructure(0) {}
-    BinaryTree(INode<int>* root) : root(root), IStructure(1) {}
-    explicit BinaryTree(int value) : root(new TreeNode(value)), IStructure(1) {}
+    BinaryTree() : root(nullptr), IBinaryTree(0) {}
+    BinaryTree(ITreeNode* root) : root(root), IBinaryTree(1) {}
 
     ~BinaryTree() { delete root; }
 
     void push(int value) override;
-    void push(INode<int>* newNode);// override;
+    void push(ITreeNode *newNode) override;
 };
 
 

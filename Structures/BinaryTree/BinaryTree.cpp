@@ -3,15 +3,16 @@
 //
 
 #include "BinaryTree.h"
+#include "TreeNode.h"
 
 void BinaryTree::push(int value) {
     this->push(new TreeNode(value));
 }
 
-void BinaryTree::push(INode<int>* newNode) {
+void BinaryTree::push(ITreeNode *newNode) {
     this->size++;
     if (this->root)
-        //this->root->push(newNode);
-    //else
+        this->root->push(newNode);
+    else
         this->root = newNode;
 }

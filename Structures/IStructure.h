@@ -13,6 +13,7 @@ protected:
     T size = 0;
 public:
     explicit IStructure(int size) : size(size) {}
+
     virtual void push(T value) = 0;
 };
 
