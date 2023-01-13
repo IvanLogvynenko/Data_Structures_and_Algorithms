@@ -8,10 +8,9 @@
 template <class T>
 class INode {
 public:
-    virtual ~INode() = default;
-    virtual void push(INode<T>* newNode) = 0;
     virtual T getValue() = 0;
     virtual explicit operator T() = 0;
+    virtual ~INode() = default;
 };
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_INODE_H

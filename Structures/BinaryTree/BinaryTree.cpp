@@ -11,7 +11,7 @@ void BinaryTree::push(int value) {
 void BinaryTree::push(INode<int>* newNode) {
     this->size++;
     if (this->root)
-        this->root->push(newNode);
-    else
+        //this->root->push(newNode);
+    //else
         this->root = newNode;
 }

@@ -7,22 +7,25 @@
 
 #include <vector>
 
-#include "../IStructure.h"
+#include "ILinkedList.h"
 #include "../ISortable.h"
+
 #include "ListNode.h"
 
 template<class T>
-class LinkedList : public IStructure<T>, public ISortable<T> {
+class LinkedList :
+        public ILinkedList<T>, public ISortable<T> {
+private:
+    ListNode<T>* root;
 public:
-    LinkedList() : root(nullptr), IStructure<T>(0) {}
-    explicit LinkedList(ListNode<T>* root) : root(root), IStructure<T>(1) {}
+    LinkedList() : root(nullptr), ILinkedList<T>(0) {}
+    explicit LinkedList(ListNode<T>* root) :
+        root(root), ILinkedList<T>(1) {}
 
-    void push(INode<T>* newNode) override;
+    void push(IListNode<T>* newNode) override;
     void push(T value) override;
 
     std::vector<T> getArray() override;
-private:
-    ListNode<T>* root;
 };
 
 template class LinkedList<int>;

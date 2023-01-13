@@ -6,23 +6,24 @@
 #define DATA_STRUCTURES_AND_ALGORITHMS_LISTNODE_H
 
 #include "../INode.h"
+#include "IListNode.h"
 
 template <class T>
-class ListNode : public INode<T> {
+class ListNode : public IListNode<T> {
 private:
     T value;
-    INode<T>* next;
+    IListNode<T>* next;
 public:
     explicit ListNode(int value) : value(value), next(nullptr) {}
     explicit ListNode(INode<T>* node) : value(node->getValue()), next(nullptr) {}
-    
-    INode<T>* getNext();
-    void push(INode<T>* newNode) override;
+
+    IListNode<T>* getNext() override;
     int getValue() override;
-    
+
+    void push(IListNode<T>* newNode) override;
     void setValue(int newValue);
-    
-    explicit operator int() override;
+
+    explicit operator T() override;
     ListNode<T>& operator= (int newValue);
 
     ~ListNode() override;

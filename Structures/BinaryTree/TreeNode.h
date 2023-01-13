@@ -16,7 +16,7 @@ public:
 
     ~TreeNode() override;
 
-    void push(INode *newNode) override;
+    void push(INode *newNode);// override;
     int getValue() override { return this->value; }
 
     bool operator> (INode& node) const { return this->value > node.getValue(); }

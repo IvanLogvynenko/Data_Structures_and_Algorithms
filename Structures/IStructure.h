@@ -14,7 +14,6 @@ protected:
 public:
     explicit IStructure(int size) : size(size) {}
     virtual void push(T value) = 0;
-    virtual void push(INode<T>* newNode) = 0;
 };
 
 

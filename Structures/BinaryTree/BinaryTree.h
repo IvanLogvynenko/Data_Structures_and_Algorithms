@@ -21,7 +21,7 @@ public:
     ~BinaryTree() { delete root; }
 
     void push(int value) override;
-    void push(INode<int>* newNode) override;
+    void push(INode<int>* newNode);// override;
 };
 
 

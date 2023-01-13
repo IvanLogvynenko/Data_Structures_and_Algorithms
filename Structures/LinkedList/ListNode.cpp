@@ -5,14 +5,14 @@
 #include "ListNode.h"
 
 template<class T>
-ListNode<T> *ListNode<T>::getNext() {
+IListNode<T>* ListNode<T>::getNext() {
     return this->next;
 }
 
 template<class T>
-void ListNode<T>::push(INode<T> *newNode) {
+void ListNode<T>::push(IListNode<T> *newNode) {
     if (this->next)
-        this->push(newNode);
+        this->next->push(newNode);
     else
         this->next = newNode;
 }
@@ -28,7 +28,7 @@ void ListNode<T>::setValue(int newValue) {
 }
 
 template<class T>
-ListNode<T>::operator int() {
+ListNode<T>::operator T() {
     return this->value;
 }
 

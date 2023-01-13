@@ -10,19 +10,25 @@ void LinkedList<T>::push(T value) {
 }
 
 template<class T>
-void LinkedList<T>::push(INode<T> *newNode) {
+void LinkedList<T>::push(IListNode<T>* newNode) {
     this->size++;
-    this->root->push(newNode);
+    if (this->root)
+        this->root->push(newNode);
+    else{
+        this->root = new ListNode<int>(newNode->getValue());
+        delete newNode;
+    }
 }
 
 template<class T>
 std::vector<T> LinkedList<T>::getArray() {
     using std::vector;
     vector<T> result = {};
-    ListNode<T>* temp = this->root;
-    for (int i = 0; i < this->size; ++i) {
-        result.push_back(temp->getValue());
-
+    IListNode<T>* currentNode = this->root;
+    while (currentNode){
+        result.push_back(currentNode->getValue());
+        currentNode = currentNode->getNext();
     }
     return result;
+
 }
