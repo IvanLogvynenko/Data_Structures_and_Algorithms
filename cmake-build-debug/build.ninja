@@ -91,6 +91,12 @@ build CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Stack/Stack.cpp.o
   OBJECT_DIR = CMakeFiles/Data_Structures_and_Algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Stack
 
+build CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Queue/Queue.cpp.o: CXX_COMPILER__Data_Structures_and_Algorithms_Debug /home/nachtwandler/Documents/Programming/C++/Data$ Structures$ and$ Algorithms/Structures/Queue/Queue.cpp || cmake_object_order_depends_target_Data_Structures_and_Algorithms
+  DEP_FILE = CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Queue/Queue.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Data_Structures_and_Algorithms.dir
+  OBJECT_FILE_DIR = CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Queue
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Data_Structures_and_Algorithms
@@ -99,7 +105,7 @@ build CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Stack/Stack.cpp.o
 #############################################
 # Link the executable Data_Structures_and_Algorithms
 
-build Data_Structures_and_Algorithms: CXX_EXECUTABLE_LINKER__Data_Structures_and_Algorithms_Debug CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/BinaryTree/BinaryTree.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/BinaryTree/TreeNode.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Exceptions/NodeAlreadyExistsException.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/LinkedList/LinkedList.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/LinkedList/ListNode.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Stack/Stack.cpp.o
+build Data_Structures_and_Algorithms: CXX_EXECUTABLE_LINKER__Data_Structures_and_Algorithms_Debug CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/BinaryTree/BinaryTree.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/BinaryTree/TreeNode.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Exceptions/NodeAlreadyExistsException.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/LinkedList/LinkedList.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/LinkedList/ListNode.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Stack/Stack.cpp.o CMakeFiles/Data_Structures_and_Algorithms.dir/Structures/Queue/Queue.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Data_Structures_and_Algorithms.dir
   POST_BUILD = :

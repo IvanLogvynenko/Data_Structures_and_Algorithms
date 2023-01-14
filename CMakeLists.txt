@@ -17,4 +17,4 @@ add_executable(Data_Structures_and_Algorithms main.cpp
         Structures/LinkedList/LinkedList.h
         Structures/LinkedList/ListNode.cpp
         Structures/LinkedList/ListNode.h
-        Structures/LinkedList/IListNode.h Structures/LinkedList/ILinkedList.h Structures/BinaryTree/ITreeNode.h Structures/BinaryTree/IBinaryTree.h Structures/Stack/Stack.cpp Structures/Stack/Stack.h Structures/Stack/IStack.h)
+        Structures/LinkedList/IListNode.h Structures/LinkedList/ILinkedList.h Structures/BinaryTree/ITreeNode.h Structures/BinaryTree/IBinaryTree.h Structures/Stack/Stack.cpp Structures/Stack/Stack.h Structures/Stack/IStack.h Structures/Queue/Queue.cpp Structures/Queue/Queue.h Structures/Queue/IQueue.h)
