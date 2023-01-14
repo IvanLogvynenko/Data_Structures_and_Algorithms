@@ -15,7 +15,7 @@
 template<class T>
 class LinkedList :
         public ILinkedList<T>, public ISortable<T> {
-private:
+protected:
     ListNode<T>* root;
 public:
     LinkedList() : root(nullptr), ILinkedList<T>(0) {}
@@ -26,6 +26,7 @@ public:
     void push(T value) override;
 
     std::vector<T> getArray() override;
+    IListNode<T>* operator[](int index) override;
 };
 
 template class LinkedList<int>;

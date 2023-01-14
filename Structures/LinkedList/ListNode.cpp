@@ -10,6 +10,11 @@ IListNode<T>* ListNode<T>::getNext() {
 }
 
 template<class T>
+void ListNode<T>::deleteNext() {
+    this->next = nullptr;
+}
+
+template<class T>
 void ListNode<T>::push(IListNode<T> *newNode) {
     if (this->next)
         this->next->push(newNode);

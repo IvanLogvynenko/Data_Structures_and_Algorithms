@@ -19,6 +19,7 @@ public:
 
     IListNode<T>* getNext() override;
     int getValue() override;
+    void deleteNext() override;
 
     void push(IListNode<T>* newNode) override;
     void setValue(int newValue);

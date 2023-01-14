@@ -7,6 +7,7 @@
 template<class T>
 class IListNode : public INode<T>{
 public:
+    virtual void deleteNext() = 0;
     virtual void push(IListNode<T>* newNode) = 0;
     virtual IListNode<T>* getNext() = 0;
 };

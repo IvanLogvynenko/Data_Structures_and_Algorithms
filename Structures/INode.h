@@ -5,6 +5,8 @@
 #ifndef DATA_STRUCTURES_AND_ALGORITHMS_INODE_H
 #define DATA_STRUCTURES_AND_ALGORITHMS_INODE_H
 
+#include <iosfwd>
+
 template <class T>
 class INode {
 public:

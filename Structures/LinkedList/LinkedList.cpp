@@ -30,5 +30,14 @@ std::vector<T> LinkedList<T>::getArray() {
         currentNode = currentNode->getNext();
     }
     return result;
+}
 
+template<class T>
+IListNode<T>* LinkedList<T>::operator[](int index) {
+    if (index >= this->size) return nullptr;
+    IListNode<T>* node = this->root;
+    for (int i = 0; i < index; ++i) {
+        node = node->getNext();
+    }
+    return node;
 }
