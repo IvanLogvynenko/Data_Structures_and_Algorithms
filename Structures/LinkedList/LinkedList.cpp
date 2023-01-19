@@ -3,21 +3,28 @@
 //
 
 #include "LinkedList.h"
+#include <string>
+#include <sstream>
 
 template<class T>
 void LinkedList<T>::push(T value) {
-    this->push(new ListNode<T>(value));
+    this->size++;
+    if (this->root)
+        this->root->push(new ListNode<T>(value));
+    else{
+        this->root = new ListNode<int>(value);
+    }
 }
 
 template<class T>
-void LinkedList<T>::push(IListNode<T>* newNode) {
-    this->size++;
-    if (this->root)
-        this->root->push(newNode);
-    else{
-        this->root = new ListNode<int>(newNode->getValue());
-        delete newNode;
+INode<T> *LinkedList<T>::find(T value) {
+    IListNode<T>* currentNode = this->root;
+    while(currentNode){
+        if (currentNode->getValue() == value)
+            return currentNode;
+        currentNode = currentNode->getNext();
     }
+    return nullptr;
 }
 
 template<class T>
@@ -40,4 +47,13 @@ IListNode<T>* LinkedList<T>::operator[](int index) {
         node = node->getNext();
     }
     return node;
+}
+
+template<class T>
+std::ostream &LinkedList<T>::operator<<(std::ostream &out) {
+    std::stringstream ss;
+    for (auto item : this->getArray())
+        ss << item << " ";
+    out << ss.str();
+    return out;
 }

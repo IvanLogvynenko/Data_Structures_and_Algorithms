@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Data_Structures_and_Algorithms main.cpp
         Structures/IStructure.h
-        Structures/ISortable.h
+        Structures/ISortableStructure.h
         Structures/INode.h
         Structures/BinaryTree/BinaryTree.cpp
         Structures/BinaryTree/BinaryTree.h
@@ -17,4 +17,17 @@ add_executable(Data_Structures_and_Algorithms main.cpp
         Structures/LinkedList/LinkedList.h
         Structures/LinkedList/ListNode.cpp
         Structures/LinkedList/ListNode.h
-        Structures/LinkedList/IListNode.h Structures/LinkedList/ILinkedList.h Structures/BinaryTree/ITreeNode.h Structures/BinaryTree/IBinaryTree.h Structures/Stack/Stack.cpp Structures/Stack/Stack.h Structures/Stack/IStack.h)
+        Structures/LinkedList/IListNode.h
+        Structures/BinaryTree/ITreeNode.h
+        Structures/BinaryTree/IBinaryTree.h
+        Structures/Stack/Stack.cpp
+        Structures/Stack/Stack.h
+        Structures/Stack/IStack.h
+        Structures/Set/Set.cpp
+        Structures/Set/Set.h
+        Structures/Set/ISet.h
+        Structures/Set/Set.cpp
+        Structures/ISearchableStructure.h
+        Structures/ISearchableStructure.h
+        Structures/ISearchableStructure.h
+        Structures/ISearchableStructure.h)
