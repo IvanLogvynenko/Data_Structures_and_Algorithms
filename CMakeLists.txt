@@ -30,4 +30,4 @@ add_executable(Data_Structures_and_Algorithms main.cpp
         Structures/ISearchableStructure.h
         Structures/ISearchableStructure.h
         Structures/ISearchableStructure.h
-        Structures/ISearchableStructure.h)
+        Structures/ISearchableStructure.h Structures/Map/Map.cpp Structures/Map/Map.h Structures/Map/IMap.h Structures/Map/Pair.cpp Structures/Map/Pair.h Structures/Map/IPair.h)

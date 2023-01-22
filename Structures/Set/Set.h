@@ -8,20 +8,32 @@
 #include "ISet.h"
 #include "../LinkedList/LinkedList.h"
 
-#include <set>
+#include <iostream>
 
 template <class T>
 class Set : public ISet<T>{
 protected:
-    //here should be some hashing code, but it isn`t here because i`m too clever to lose my time doing it
-    LinkedList<T> *linkedList;
+    std::vector<T> elements = {};
+    std::vector<int> ids = {};
+
+    std::hash<T> hashStructure;
 public:
-    Set() : ISet<T>(), linkedList(new LinkedList<T>()) {}
+    Set() : ISet<T>() {}
+
     void push(T) override;
 
     bool checkExistence(T);
 };
 
-template class Set<int>;
+template<class T>
+bool Set<T>::checkExistence(T value) {
+
+}
+
+
+template<class T>
+void Set<T>::push(T value) {
+
+}
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_SET_H
