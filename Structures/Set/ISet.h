@@ -11,5 +11,7 @@ template <class T>
 class ISet : IStructure<T> {
 public:
     ISet() : IStructure<T>(0) {}
+    virtual bool checkExistence(T) = 0;
+    virtual void deleteElement(T) = 0;
 };
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_ISET_H
