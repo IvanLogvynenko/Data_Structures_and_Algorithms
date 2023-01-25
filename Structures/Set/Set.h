@@ -5,10 +5,9 @@
 #ifndef DATA_STRUCTURES_AND_ALGORITHMS_SET_H
 #define DATA_STRUCTURES_AND_ALGORITHMS_SET_H
 
-#include "ISet.h"
-#include "../LinkedList/LinkedList.h"
+#include <vector>
 
-#include <algorithm>
+#include "ISet.h"
 
 template <class T>
 class Set : public ISet<T>{
