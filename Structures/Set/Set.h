@@ -5,23 +5,61 @@
 #ifndef DATA_STRUCTURES_AND_ALGORITHMS_SET_H
 #define DATA_STRUCTURES_AND_ALGORITHMS_SET_H
 
-#include "ISet.h"
-#include "../LinkedList/LinkedList.h"
+#include <vector>
 
-#include <set>
+#include "ISet.h"
 
 template <class T>
 class Set : public ISet<T>{
 protected:
-    //here should be some hashing code, but it isn`t here because i`m too clever to lose my time doing it
-    LinkedList<T> *linkedList;
+    std::vector<std::vector<T>> elements = { };
+
+    std::hash<T> hashStructure;
 public:
-    Set() : ISet<T>(), linkedList(new LinkedList<T>()) {}
+    Set() : ISet<T>() {}
+
     void push(T) override;
 
-    bool checkExistence(T);
+    bool checkExistence(T) override;
+    void deleteElement(T) override;
 };
 
-template class Set<int>;
+template<class T>
+void Set<T>::deleteElement(T value) {
+    std::vector<T> &vector = this->elements[hashStructure(value)];
+
+    for (auto& item : vector) {
+        if (item == value)
+            vector.erase(std::find(vector.begin(), vector.end(), item));
+        return;
+    }
+}
+
+template<class T>
+bool Set<T>::checkExistence(T value) {
+    for (auto item : this->elements[hashStructure(value)]) {
+        if (item == value)
+            return true;
+    }
+    return false;
+}
+
+//TODO_later)))): make a solution that won`t bring any collisions
+template<class T>
+void Set<T>::push(T value) {
+    int id = hashStructure(value);
+
+    if (this->elements.size() <= id) {
+        this->elements.reserve(id+1);
+        this->elements[id].push_back(value);
+        return;
+    }
+    else
+        for (auto item: this->elements[id])
+            if (item == value)
+                throw -1;
+
+    this->elements[id].push_back(value);
+}
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_SET_H
